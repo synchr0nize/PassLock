@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/digits4"
+        android:layout_width="40dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:hint="XX"
+        android:importantForAutofill="no"
+        android:inputType="numberPassword"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/digits3"
+        app:layout_constraintTop_toBottomOf="@+id/accountName" />
+
+    <EditText
+        android:id="@+id/digits3"
+        android:layout_width="40dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="XX"
+        android:importantForAutofill="no"
+        android:inputType="numberPassword"
+        android:nextFocusDown="@id/digits2"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/digits4"
+        app:layout_constraintStart_toEndOf="@+id/digits2"
+        app:layout_constraintTop_toBottomOf="@+id/accountName" />
+
+    <EditText
+        android:id="@+id/digits2"
+        android:layout_width="40dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="XX"
+        android:importantForAutofill="no"
+        android:inputType="numberPassword"
+        android:nextFocusDown="@id/digits3"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/digits3"
+        app:layout_constraintStart_toEndOf="@+id/digits1"
+        app:layout_constraintTop_toBottomOf="@+id/accountName" />
+
+    <EditText
+        android:id="@+id/accountName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:text="@string/account_name"
+        app:layout_constraintBottom_toTopOf="@+id/digits4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="264dp"
+        android:layout_marginEnd="115dp"
+        android:text="@string/temporary"
+        app:layout_constraintEnd_toStartOf="@+id/passwords"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genPassword" />
+
+    <EditText
+        android:id="@+id/digits1"
+        android:layout_width="40dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:hint="XX"
+        android:importantForAutofill="no"
+        android:inputType="numberPassword"
+        android:nextFocusDown="@id/digits2"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/genPassword"
+        app:layout_constraintEnd_toStartOf="@+id/digits2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accountName" />
+
+    <Button
+        android:id="@+id/genPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="40dp"
+        android:onClick="randomise"
+        android:text="@string/save"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/digits1" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="251dp"
+        android:onClick="savePass"
+        android:text="@string/save"
+        app:layout_constraintBottom_toTopOf="@+id/passwords"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/genPassword"
+        app:layout_constraintTop_toBottomOf="@+id/digits4" />
+
+    <Button
+        android:id="@+id/passwords"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="50dp"
+        android:onClick="accountsActivity"
+        android:text="@string/passwords"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

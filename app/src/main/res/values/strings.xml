@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PassLog</string>
+    <string name="save">Save</string>
+    <string name="passwords">Passwords</string>
+    <string name="temporary">Temporary</string>
+    <string name="generate_password">Generate Password</string>
+    <string name="account_name">Account Name</string>
+</resources>
